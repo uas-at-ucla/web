@@ -4,10 +4,21 @@
     <title>UAS @ UCLA</title>
     <meta name="description" content="UAS @ UCLA">
     <link rel="stylesheet" href="./styles/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class='title'>
+   <div class="topnav" id="topnav">
+      <a href="https://uas.seas.ucla.edu/" class="active">Home</a>
+      <a href="https://uas.seas.ucla.edu/join">Join</a>
+      <a href="https://uas.seas.ucla.edu/calendar">Calendar</a>
+      <a href="https://uas.seas.ucla.edu/members">Members</a>
+      <a href="https://uas.seas.ucla.edu/docs">Docs</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>
+       </a>
+    </div>
+    <div class='title' id="title">
         <img class="logo" src="./assets/logo.png"/>
         <div class="h1">UAS @ UCLA</div>
         <div class="h2">UCLA's Premier Undergraduate Aerial Robotics Team</div>
@@ -65,4 +76,24 @@
         <a class="go-button" href="https://uasatucla.org/sponsors#packet">View Packet</a>
      </div>
 </body>
+<script>
+   function myFunction() {
+     var x = document.getElementById("topnav");
+     if (x.className === "topnav") {
+       x.className += " responsive";
+     } else {
+       x.className = "topnav";
+     }
+   }
+   document.addEventListener("scroll", scrollFunct);
+   function scrollFunct(){
+      if(window.scrollY > document.getElementById('title').clientHeight){
+         document.getElementById('topnav').style.backgroundColor = "black";
+      }
+      else{
+         document.getElementById('topnav').style.backgroundColor = "transparent";
+      }
+      
+   }
+   </script>
 </html>
