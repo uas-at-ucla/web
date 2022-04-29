@@ -4,16 +4,17 @@
     <title>UAS @ UCLA</title>
     <meta name="description" content="UAS @ UCLA">
     <link rel="stylesheet" href="./styles/Home.css">
+    <link rel="stylesheet" href="./styles/Navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
    <div class="topnav" id="topnav">
-      <a href="https://uas.seas.ucla.edu/" class="active">Home</a>
-      <a href="https://uas.seas.ucla.edu/join">Join</a>
-      <a href="https://uas.seas.ucla.edu/calendar">Calendar</a>
-      <a href="https://uas.seas.ucla.edu/members">Members</a>
-      <a href="https://uas.seas.ucla.edu/docs">Docs</a>
+      <a href="./index.html" class="active">Home</a>
+      <a href="./join.html">Join</a>
+      <a href="./calendar.html">Calendar</a>
+      <a href="./members.html">Members</a>
+      <a href="./docs.html">Docs</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
          <i class="fa fa-bars"></i>
        </a>
@@ -86,6 +87,7 @@
      }
    }
    document.addEventListener("scroll", scrollFunct);
+   document.getElementById('topnav').style.backgroundColor="transparent";
    function scrollFunct(){
       if(window.scrollY > document.getElementById('title').clientHeight){
          document.getElementById('topnav').style.backgroundColor = "black";
