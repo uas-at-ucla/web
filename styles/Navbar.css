@@ -1,7 +1,7 @@
 
 .topnav {
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     height: max-content;
     width: 100%;
     background-color: black;

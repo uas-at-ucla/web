@@ -4,233 +4,164 @@
 <head>
     <title>Sponsors - UAS @ UCLA</title>
     <meta name="description" content="UAS @ UCLA" />
+    <link rel="stylesheet" href="./styles/Sponsors.css">
+    <link rel="stylesheet" href="./styles/Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-    <div class="nav nav-pills flex-column flex-sm-row" id="nav-tab" role="tablist"
-        style="font-size: 18px; font-weight: bold">
-        <a class="text-sm-center nav-item nav-link active" id="sponsors-tab" data-toggle="tab" href="#sponsors"
-            role="tab" aria-controls="sponsors" aria-selected="true" style="text-decoration: none;">Sponsors</a>
-        <a class="text-sm-center nav-item nav-link" id="crowdfunding-tab" data-toggle="tab" href="#crowdfunding"
-            role="tab" aria-controls="crowdfunding" aria-selected="false" style="text-decoration: none;">Crowdfunding
-            Donors</a>
-        <a class="text-sm-center nav-item nav-link" id="packet-tab" data-toggle="tab" href="#packet" role="tab"
-            aria-controls="packet" aria-selected="false" style="text-decoration: none;">Prospective Sponsors</a>
+    <div class="topnav" id="topnav">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./join.html">Join</a>
+        <a href="./calendar.html">Calendar</a>
+        <a href="./members.html">Members</a>
+        <a href="./docs.html">Docs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="sponsors" role="tabpanel" aria-labelledby="sponsors-tab">
+    <div id="spacer"></div>
+    <div class="tab-content">
+        <div class="sponsor-graphics">
             <h1 id="our-sponsors">Our Sponsors</h1>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 3%">
-                <a href="http://aiaa.seas.ucla.edu/">
-                    <img src="./assets/sponsors/f_aiaa_ucla.png" width="100%"
-                        style="margin-left: 0px; margin-top: 20%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://www.northropgrumman.com/">
-                    <img src="./assets/sponsors/f_northrop_grumman.png" width="100%"
-                        style="margin-left: 0px; margin-top: 20%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://boeing.com/">
-                    <img src="./assets/sponsors/f_boeing.png" width="100%"
-                        style="margin-left: 0px; margin-top: 20%;"></a>
-            </div>
-
-
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 3%">
-                <a href="https://www.solidworks.com/">
-                    <img src="./assets/sponsors/f_solidworks.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://www.mathworks.com/">
-                    <img src="./assets/sponsors/f_mathworks.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://www.cubepilot.org/">
-                    <img src="./assets/sponsors/f_cubepilot.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-
-
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 3%">
-                <a href="https://www.elevatedmaterials.com/">
-                    <img src="./assets/sponsors/f_elevatedmaterials.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://www.protocase.com/">
-                    <img src="./assets/sponsors/f_protocase.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://www.flightwave.aero/">
-                    <img src="./assets/sponsors/f_flightwave.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-
-
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 3%">
-                <a href="https://www.gmgins.com/">
-                    <img src="./assets/sponsors/f_gmg.png" width="100%" style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://www.github.com/">
-                    <img src="./assets/sponsors/f_github.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://www.travis-ci.org/">
-                    <img src="./assets/sponsors/f_travis_ci.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-
-
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 3%">
-                <a href="https://www.library.ucla.edu/clicc/lux-lab/">
-                    <img src="./assets/sponsors/f_luxlab.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://samueli.ucla.edu/alumni/">
-                    <img src="./assets/sponsors/f_ucla_eaa.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
-            </div>
-            <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 6%">
-                <a href="https://alumni.ucla.edu/">
-                    <img src="./assets/sponsors/f_ucla_alumni.png" width="100%"
-                        style="margin-left: 0px; margin-top: 10%;"></a>
+            <div class="sponsor-table">
+                <tr>
+                    <td><img src="./assets/sponsors/f_aiaa_ucla.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_northrop_grumman.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_boeing.png" width="30%"></a></td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/sponsors/f_solidworks.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_mathworks.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_cubepilot.png" width="30%"></a></td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/sponsors/f_elevatedmaterials.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_protocase.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_flightwave.png" width="30%"></a></td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/sponsors/f_gmg.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_github.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_travis_ci.png" width="30%"></a></td>
+                </tr>
+                <tr>
+                    <td><img src="./assets/sponsors/f_luxlab.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_ucla_eaa.png" width="30%"></a></td>
+                    <td><img src="./assets/sponsors/f_ucla_alumni.png" width="30%"></a></td>
+                </tr>
             </div>
             <h2 id="project-specific-sponsors">Project Specific Sponsors</h2>
-
-            <div style="width:100%;display:inline-block;vertical-align: top; margin-left: 3%">
-                <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 0%">
-                    <a href="https://www.nasa.gov/">
-                        <img src="./assets/sponsors/f_nasa.png" width="100%"
-                            style="margin-left: 0px; margin-top: 10%;"></a>
-                </div>
-                <div style="width:60%;display:inline-block;vertical-align: top; margin-left: 3%; margin-top: 3%"> Our <a
-                        href="https://uasatucla.org/aviata">AVIATA</a> project is sponsored by the NASA Aeronautics
+            <div class="project-sponsor">
+                <img src="./assets/sponsors/f_nasa.png" width="30%"></a>
+                <div> Our <a href="./aviata">AVIATA</a> project is sponsored by the NASA Aeronautics
                     Research Mission Directorate (ARMD) in the <a href="https://nari.arc.nasa.gov/usrc">University
                         Student Research Challenge</a> (USRC) under award number 80NSSC20K1452.</div>
             </div>
-
-            <div style="width:100%;display:inline-block;vertical-align: top; margin-left: 3%">
-                <div style="width:25%;display:inline-block;vertical-align: top; margin-left: 0%">
-                    <a href="https://www.nist.gov/">
-                        <img src="./assets/sponsors/f_nist.png" width="100%"
-                            style="margin-left: 0px; margin-top: 10%;"></a>
-                </div>
-                <div style="width:60%;display:inline-block;vertical-align: top; margin-left: 3%; margin-top: 3%"> We
-                    received cash prize awards in our advancement eventually to Stage 3 Finalist in the <a
-                        href="https://uasatucla.org/FRC">First Responder UAS Endurance Challenge</a> competition
+            <div class="project-sponsor">
+                <img src="./assets/sponsors/f_nist.png" width="30%"></a>
+                <div> We
+                    received cash prize awards after our advancement to Stage 3 Finalist in the <a
+                        href="./FRC">First Responder UAS Endurance Challenge</a> competition
                     sponsored by the National Institute of Standards and Technology (NIST).</div>
             </div>
         </div>
-        <div class="tab-pane fade" id="crowdfunding" role="tabpanel" aria-labelledby="crowdfunding-tab">
-            <h1 id="ucla-spark-you-got-us-to-10-000-you-rock-">UCLA Spark: You Got Us to $10,000 - You Rock!</h1>
-            <h3
-                id="here-s-a-huge-thanks-to-each-person-who-donated-to-our-2020-ucla-spark-campaign-https-spark-ucla-edu-uas-and-made-it-a-success-">
-                Here&#39;s a huge thanks to each person who donated to our <a href="https://spark.ucla.edu/uas">2020
-                    UCLA Spark campaign</a> and made it a success.</h3>
-            <br>
-            <div class="container-fluid">
-                <div class="row" style="text-align: center; font-weight: bold">
-                    <div class="col-sm">
-                        Akshara Aditya<br>
-                        John Alexander<br>
-                        Calvin Raab<br>
-                        Arnav Rathi<br>
-                        Aybee Aybee<br>
-                        Alex Baratti<br>
-                        Mark &amp; Carole Baratti<br>
-                        Catherine Collins<br>
-                        Cutler Crowell<br>
-                        Lisa Foo<br>
-                        William Goodin<br>
-                        Ann Goodman<br>
-                        Sandhya Gowravajhala<br>
-                        Junmin Hu<br>
-                        Systems Integration Plus Inc.<br>
-                        Captain Kangaroo
-                    </div>
-                    <div class="col-sm">
-                        Tom Kantner<br>
-                        Aline Kassabian Yeterian<br>
-                        Kevin King<br>
-                        Abhinav Kumar<br>
-                        Naman Kumar<br>
-                        Abhishek Kumar<br>
-                        Blake Lagerson<br>
-                        Oliver Lam<br>
-                        Andrea Lapuz<br>
-                        Chih-Min Lin<br>
-                        Rick Liou<br>
-                        Ashvi Luthra<br>
-                        Matt McSweeney<br>
-                        Vladimir Mikhalev<br>
-                        Comran Morshed<br>
-                        Steve Mortensen
-                    </div>
-                    <div class="col-md">
-                        Anweshan Das<br>
-                        Hirofumi Koichihara<br>
-                        Dave and Liz Ogilvy<br>
-                        Aven Pradhan<br>
-                        Rajiv Ranjan<br>
-                        Jeff Schafer<br>
-                        Vimlendra Sharan<br>
-                        Max Shustef<br>
-                        Harry and Mandy Singh<br>
-                        Taylor Stayton<br>
-                        Christopher Thorne<br>
-                        Norris Tie<br>
-                        Jun Wang<br>
-                        Jeffrey Yu<br>
-                        Kidspark Education
-                    </div>
-                </div>
-                <br>
-                ...And all the rest who did not elect to display their name.
-            </div>
-            <h1 id="aviata">AVIATA</h1>
-            <h3
-                id="as-part-of-the-grant-stipulation-from-nasa-we-had-to-solicit-2000-dollars-in-crowdfunding-to-demonstrate-to-nasa-that-our-proposal-for-aviata-https-uasatucla-org-aviata-has-public-interest-we-would-like-to-thank-each-of-our-donors-for-getting-us-to-this-goal-">
-                As part of the grant stipulation from NASA, we had to solicit $2000 dollars in crowdfunding to
-                demonstrate to NASA that our proposal for <a href="https://uasatucla.org/aviata">AVIATA</a> has public
-                interest. We would like to thank each of our donors for getting us to this goal.</h3>
-            <br>
-            <div class="container-fluid">
-                <div class="row" style="text-align: center; font-weight: bold">
-                    <div class="col-sm">
-                        Chris Thorne<br>
-                        Bryan Sun<br>
-                        Amy Mortensen<br>
-                        Sophie<br>
-                    </div>
-                    <div class="col-md">
-                        David Thorne<br>
-                        Bob &amp; Nancy Nemiroff<br>
-                        Sean Cooke
-                    </div>
-                </div>
-                <br>
-                ...And all the rest who did not elect to display their name.
-            </div>
-        </div>
-        <div class="tab-pane fade" id="packet" role="tabpanel" aria-labelledby="packet-tab">
+        <div class="sponsor-packet" id="packet">
             <h1 id="help-uas-technology-reach-new-heights">Help UAS Technology Reach New Heights</h1>
-
-            <a href="https://drive.google.com/file/d/1zf1_Dq5939UjwyIyDpAim47URE6_J2qL/view" target="_blank">Open in new
-                window</a>
             <iframe style="margin-top: 20px; height: 90vh; border-radius:20px"
-                src="https://drive.google.com/file/d/1zf1_Dq5939UjwyIyDpAim47URE6_J2qL/preview" width="100%"
-                height="100%"></iframe>
-
+                src="https://drive.google.com/file/d/1zf1_Dq5939UjwyIyDpAim47URE6_J2qL/preview" width="90%"
+                height="90%"></iframe>
+        </div>
+        <div class="sponsor-graphics" id="crowdfunding">
+            <h1>UCLA Spark: You Got Us to $10,000 - You Rock!</h1>
+            <h3>Here&#39;s a huge thanks to each person who donated to our <a href="https://spark.ucla.edu/uas">2020
+                    UCLA Spark campaign</a> and made it a success.</h3>
+            <div>
+                Akshara Aditya<br>
+                John Alexander<br>
+                Calvin Raab<br>
+                Arnav Rathi<br>
+                Aybee Aybee<br>
+                Alex Baratti<br>
+                Mark &amp; Carole Baratti<br>
+                Catherine Collins<br>
+                Cutler Crowell<br>
+                Lisa Foo<br>
+                William Goodin<br>
+                Ann Goodman<br>
+                Sandhya Gowravajhala<br>
+                Junmin Hu<br>
+                Systems Integration Plus Inc.<br>
+                Captain Kangaroo<br>
+                Tom Kantner<br>
+                Aline Kassabian Yeterian<br>
+                Kevin King<br>
+                Abhinav Kumar<br>
+                Naman Kumar<br>
+                Abhishek Kumar<br>
+                Blake Lagerson<br>
+                Oliver Lam<br>
+                Andrea Lapuz<br>
+                Chih-Min Lin<br>
+                Rick Liou<br>
+                Ashvi Luthra<br>
+                Matt McSweeney<br>
+                Vladimir Mikhalev<br>
+                Comran Morshed<br>
+                Steve Mortensen<br>
+                Anweshan Das<br>
+                Hirofumi Koichihara<br>
+                Dave and Liz Ogilvy<br>
+                Aven Pradhan<br>
+                Rajiv Ranjan<br>
+                Jeff Schafer<br>
+                Vimlendra Sharan<br>
+                Max Shustef<br>
+                Harry and Mandy Singh<br>
+                Taylor Stayton<br>
+                Christopher Thorne<br>
+                Norris Tie<br>
+                Jun Wang<br>
+                Jeffrey Yu<br>
+                Kidspark Education<br>
+                ...And all the rest who elected not to display their name
+            </div>
+            <h1>AVIATA</h1>
+            <h3>As part of the grant stipulation from NASA, we had to solicit $2000 dollars in crowdfunding to
+                demonstrate to NASA that our proposal for <a href="./aviata">AVIATA</a> has public
+                interest. We would like to thank each of our donors for getting us to this goal.</h3>
+            <div class="bottom-element">
+                Chris Thorne<br>
+                Bryan Sun<br>
+                Amy Mortensen<br>
+                Sophie<br>
+                David Thorne<br>
+                Bob &amp; Nancy Nemiroff<br>
+                Sean Cooke<br>
+                ...And all the rest who elected not to display their name
+            </div>
         </div>
     </div>
+    </div>
 </body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("topnav");
+        console.log(document.getElementById("topnav").clientHeight);
+        if (x.className === "topnav") {
+            x.className += " responsive";
+            document.getElementById("spacer").style.height = "5px";
+        } else {
+            x.className = "topnav";
+            document.getElementById("spacer").style.height = document.getElementById("topnav").clientHeight + "px";
+        }
+        console.log(document.getElementById("topnav").clientHeight);
+    }
+    document.getElementById("spacer").style.height = document.getElementById("topnav").clientHeight + "px";
+    window.addEventListener("resize", setCalendarLocation);
+    function setCalendarLocation() {
+        document.getElementById("spacer").style.height = document.getElementById("topnav").clientHeight + "px";
+    }
+</script>
 
 </html>

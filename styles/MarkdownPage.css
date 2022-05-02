@@ -13,5 +13,27 @@ img{
 iframe{
     display: block;
     margin-left: auto;
+    max-width: 90%;
     margin-right: auto;
+}
+h1{
+    width: 85%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    border-bottom: grey 2px solid;
+}
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 85%;
+}
+h2{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+h3{
+    padding-left: 20px;
+    padding-right: 20px;
 }
