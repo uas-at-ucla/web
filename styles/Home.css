@@ -92,9 +92,7 @@ body{
   color: #fff;
   font-size: 32px;
   background-color: #005587;
-  border: 3px solid #005587;
   padding: 12px 35px;
-  border-radius: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: Lato,sans-serif
@@ -108,9 +106,7 @@ body{
   color: #fff;
   font-size: 18px;
   background-color: #005587;
-  border: 3px solid #005587;
   padding: 12px 35px;
-  border-radius: 20px;
   margin-bottom: 10px;
   margin-left: 5px;
   margin-top: auto;
@@ -147,7 +143,6 @@ body{
   text-align: center;
   justify-content: center;
   background-color: #fff;
-  border-radius: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
   max-width: 450px
