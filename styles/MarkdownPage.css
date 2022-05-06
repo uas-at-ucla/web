@@ -37,3 +37,14 @@ h3{
     padding-left: 20px;
     padding-right: 20px;
 }
+.autogen-md{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 85%;
+}
+.ul{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 85%;
+}
+}
