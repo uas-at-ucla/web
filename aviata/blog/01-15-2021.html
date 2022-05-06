@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs - UAS @ UCLA</title>
+    <meta name="description" content="UAS @ UCLA" />
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/MarkdownPage.css">
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="topnav">
+        <a href="https://uas.seas.ucla.edu/index.html" class="active">Home</a>
+        <a href="https://uas.seas.ucla.edu/join.html">Join</a>
+        <a href="https://uas.seas.ucla.edu/calendar.html">Calendar</a>
+        <a href="https://uas.seas.ucla.edu/members.html">Members</a>
+        <a href="https://uas.seas.ucla.edu/docs.html">Docs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="spacer"></div>
+    <h1>Hardware Design</h1>
+    <h3>Author: James Tseng</h3>
+    <div class="autogen-md">We at Unmanned Aerial Systems at UCLA welcome the new year, and are very excited looking
+        forward to pushing ahead with our projects!<br>In the mechanical airframe sub-team, we have most recently been
+        looking into sourcing our drone fleet. In our initial proposal and designs, we are using hobbyist hexacopters,
+        particularly the F550 model, which had used to be produced by DJI, and has since been taken over by 3rd parties
+        since DJI discontinued them. This has been one of the issues with finding a quality and reputable supply, as
+        supply is both rare and expensive that fits our specifications.<br>Since we are outfitting our drones with
+        additional equipment such as a Raspberry Pi and our custom docking mount, as well as being able to lift the
+        payload frame, we need a stronger propulsion system. In switching our onboard battery design to 4S (16V), the
+        drones can achieve satisfactory performance.<br>This has since been our main focus as both the controls and
+        docking sub-teams are nearly ready to begin hardware testing with cooperative control and computer vision
+        tracking, respectively. Another mechanical airframe subteam involvement with these endeavors has been the design
+        of a mounting adapter that connects two drones together through carbon fiber tubes to test the minimum
+        cooperative control setup.<div style="text-align:center"><img src="/assets/aviata/aviata-control-testing-frame.png"
+                style="width: 60%;" /></div><br><b><i>Figure 1:</b> Two different mount designs to connect two drones
+        with carbon fiber spars to test minimum cooperative control.</i><br>Our next goal is to finalize our drone fleet
+        design, order them, and assemble them. As a priority, we will first be figuring out shipping the current drones
+        we have on hand to the sub-teams to conduct their testing. These tests are preparing us for our CDR (Critical
+        Design Review) this quarter, before we begin integrating each sub-team’s subsystem for our tech demo hopefully
+        in June!<br></div>
+    <h1>Software Design</h1>
+    <h3>Author: Ryan Nemiroff</h3>
+    <div class="autogen-md">The software team has been hard at work writing code for each subsystem and testing via
+        simulation. We have successfully demonstrated distributed control as well as vision-guided flight using
+        simulated AprilTags. Mesh networking needs a little more tweaking before we can fully test it, so stay tuned for
+        when that happens.<br>Firstly, here is the distributed control simulation, demonstrating a leader drone
+        commanded to takeoff and land (left), and a follower drone copying its attitude & thrust commands (right).
+        Communication is implemented via ROS2.<br>
+        <div style="text-align:center"><iframe
+                src="https://drive.google.com/file/d/16wvXjV1I5ccTXp6uFZZBnz5HPnasDfZd/preview" width="640"
+                height="480"></iframe></div><br>And here is our docking simulation, with the 3D world shown on the left
+        and what the drone sees from its perspective on the right as it approaches the AprilTags.<div
+            style="text-align:center"><iframe
+                src="https://drive.google.com/file/d/1Xj-eDURRgNj87oSIXgvovkN8C68XPoGe/preview" width="640"
+                height="360"></iframe></div><br>Obviously, this is a long way from our final product. One limitation of
+        the available simulation tools is the inability to connect multiple vehicles in a rigid body (and it’s already
+        very computationally intensive). Previously, we had simulated this using a simplified model which did not
+        incorporate the actual flight software. To put these things together, there is hardware on the way which will
+        allow the first real-world test of cooperative control. The temporary test structure using two drones is shown
+        in this week’s hardware blog.<br>Potentially, the full rigid structure could be simulated along with the flight
+        software, but this would require significant modification of the already complex simulation tools. Because we
+        are able to conduct real-world tests, the benefit of simulation is not very appealing given the cost of
+        implementation.<br>We are in anticipation of the results of this first real-world controls test, which will
+        inform us if and how we should implement alternative control methods -- there are many potential ways to
+        accomplish cooperative control, and we want performance to guide our decision on which to use.<br>
+    </div>
+    <h3>Acknowledgment</h3>
+    <div class="autogen-md">These results are based upon work supported by the NASA Aeronautics Research Mission
+        Directorate under award number 80NSSC20K1452. This material is based upon a proposal tentatively selected by
+        NASA for a grant award of $10,811, subject to successful crowdfunding. Any opinions, findings, and conclusions
+        or recommendations expressed in this material are those of the authors and do not necessarily reflect the views
+        of NASA.</div>
+</body>
+<script src="../scripts/navbar.js"></script>
+
+</html>
