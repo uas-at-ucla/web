@@ -26,12 +26,12 @@ def italic(s):
     l = len(s.group(0))
     out+=s.group(0)[1:(l-1)]
     out+='</i>'
-    return out
+    return out   
 
 def link(s):
     split = s.group(0).split('](')
     out='<a href=\"'
-    out+=split[1].replace(')','')
+    out+=split[1].replace(')','').replace('uasatucla.org', 'uas.seas.ucla.edu')
     out+='\">'
     out+=split[0][1:]
     out+='</a>'
