@@ -23,12 +23,12 @@
     <div id="spacer"></div>
     <h1>Hardware Design</h1>
     <h3>Author: Bhrugu Mallajosyula</h3>
-    <div class="autogen-md">It’s been a few weeks since our last blog update, and we’ve made a good deal of progress on
+    <div class="autogen-md">It's been a few weeks since our last blog update, and we've made a good deal of progress on
         hardware design and planning. After receiving advice from professors during the Preliminary Design Review, we
         focused on making mechanical docking more robust, increasing the thrust each drone can produce, and finalizing
         the payload attachment mechanism.<br>As we mentioned in the previous hardware update, we are using a sort of
         “funnel” on our docking joints to guide the drones into the docking mechanism to form a strong mechanical
-        connection that does not require power to sustain. After advice from the PDR, we’ve modified the design to
+        connection that does not require power to sustain. After advice from the PDR, we've modified the design to
         prevent wind gusts from pushing the frame around, and we are considering an additional funnel to guide the drone
         into position in the z-direction as well.<br>We have also decided to switch to a S4 battery rather than the S3
         we had been using in order to increase the maximum thrust our drones can produce in flight. This gives us more
@@ -37,11 +37,11 @@
         fixed weight. The rest of the container will be filled with packing material to reduce movement of the payload
         during flight.<br>Our next steps involve ensuring our motors can withstand the new power being supplied to them,
         making the docking system more robust, and testing the structural strength of all the components in preparation
-        for the PDR next quarter. We hope you’ll stick with us as we progress!<br></div>
+        for the PDR next quarter. We hope you'll stick with us as we progress!<br></div>
     <h1>Software Design</h1>
     <h3>Author: Puneet Nayyar</h3>
-    <div class="autogen-md">On the software side of the project, we’ve been continuing our work on creating simulations
-        and started integrating some of these components together.<br>For example, we’ve developed a camera simulator
+    <div class="autogen-md">On the software side of the project, we've been continuing our work on creating simulations
+        and started integrating some of these components together.<br>For example, we've developed a camera simulator
         which lets us effectively see a translated, rotated, and scaled vision target from the perspective of the drone.
         The output of this camera simulator is then passed to our AprilTag target identification system which gives an
         estimate of how far off the drone is from the center of the target. We can then use that error estimate to
@@ -49,7 +49,7 @@
         from the camera simulator to the drone navigation commands, have been integrated into an overall docking
         simulator that lets us actually see a drone navigate to and land on a vision target.<br>Each subteam has also
         been working on additional testing apart from the simulations. In order to improve our vision based target
-        identification, we’ve begun experimenting with artificially generating camera images. In addition, the
+        identification, we've begun experimenting with artificially generating camera images. In addition, the
         communications subteam has also begun setting up a basic mesh network consisting of a few devices. Lastly,
         controls is working on implementing ROS2 support.<br></div>
     <h3>Acknowledgment</h3>

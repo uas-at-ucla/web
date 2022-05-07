@@ -45,7 +45,7 @@
         of the final frame at the 8 drone scale.<br>
         <div style="text-align:center"><img src="/assets/aviata/4-drone-system.png" style="width: 40%;" /></div><br>This new
         testing structure utilizes the same square carbon fiber tubes that will be on the final prototype frame, and
-        utilizes 3D printed clamping structures to hold the drones and tubes together. Here’s a closer look at the rigid
+        utilizes 3D printed clamping structures to hold the drones and tubes together. Here's a closer look at the rigid
         clamp mounts designed on a drone and the central structure:<br>
         <div style="text-align:center"><img src="/assets/aviata/4-drone-system-close.png" style="width: 40%;" /></div><br>This
         testing structure is already underway in fabrication, and should expect to see the first test flight soon before
@@ -64,31 +64,31 @@
         leader/follower roles. This has to do with the fact that we are relying on the PX4 flight software to estimate
         the thrust required to hover, but the follower drone is not in a mode that actively estimates this hover thrust.
         When it becomes the leader, it takes a moment to determine the necessary amount of thrust. The easiest way to
-        fix this was to simply tweak PX4 so that it actively estimates the hover thrust at all times. Very soon, we’ll
+        fix this was to simply tweak PX4 so that it actively estimates the hover thrust at all times. Very soon, we'll
         be able to test how effective this is.<br>Something we <i>have</i> tested is the ability of the drones to fly
         cooperatively while facing different directions (e.g. north, south, east, west) relative to each other. This
         requires live adjustments to the attitude setpoints to transform them to the correct coordinate frame. If we
-        have done this correctly, there won’t be any effect on the frame’s maneuverability. Luckily, the test was
-        successful and that’s exactly what we observed. Specifically, we tested the same 2-drone setup, but with one
-        drone rotated 45 degrees counterclockwise around the yaw axis -- in other words, it’s facing a little to the
+        have done this correctly, there won't be any effect on the frame's maneuverability. Luckily, the test was
+        successful and that's exactly what we observed. Specifically, we tested the same 2-drone setup, but with one
+        drone rotated 45 degrees counterclockwise around the yaw axis -- in other words, it's facing a little to the
         left. This is a precursor to the final frame design in which all 8 drones will be facing radially
         outward.<br>Additionally, we have reached a huge milestone by using mesh networking (OLSRv2) for communication
         in flight. This will be important when scaling up to more than 2 drones, because a mesh network will offer the
         greatest flexibility in distributing information among a swarm of drones with no designated access point. While
         we have been working on mesh networking for a while, we just now figured out how to integrate it with the flight
-        code, which uses ROS2 to communicate. The challenge was configuring ROS2 (specifically, it’s Fast-DDS
+        code, which uses ROS2 to communicate. The challenge was configuring ROS2 (specifically, it's Fast-DDS
         middleware), to operate within the constraints of the mesh network, which does not support multicast. This
         required reading and re-reading much of the Fast-DDS documentation until we understood it well enough to make
         our desired configuration. In the future, we are interested in implementing multicast and/or broadcast on the
         mesh network, because this will allow ROS2 nodes to automatically discover each other, as they do on normal
-        networks.<br>Recently, I’ve been hard at work prepping hardware for the upcoming 4-drone test. There are a lot
+        networks.<br>Recently, I've been hard at work prepping hardware for the upcoming 4-drone test. There are a lot
         of little details and repetitive tasks that take time, so it's not much to talk about. A couple important next
         steps will be fleshing out a graphical ground control station so it is easier to manage the increased number of
         drones, and analyzing the modeled behavior in the Python simulator before trying out the real thing.<br>Below is
-        a preview of what the 4-drone test will look like, in my ridiculously messy garage. It’s big!<br><img
+        a preview of what the 4-drone test will look like, in my ridiculously messy garage. It's big!<br><img
             src=/assets/aviata/4-drones.jpg alt="4-drones.jpg" /><br>Additionally, each drone now has a name! Thanks to our
         crowdfunding donors who named them. See who they are at <a
-            href="https://uas.seas.ucla.edu/aviata">uasatucla.org/aviata</a>.<br><img src=/assets/aviata/drone-names.jpg
+            href="https://uas.seas.ucla.edu/aviata">uas.seas.ucla.edu/aviata</a>.<br><img src=/assets/aviata/drone-names.jpg
             alt="drone-names.jpg" />Names are visible when zoomed in. From left to right, they are: <b>Bryan Sun</b>,
         <b>DN</b>, <b>Hopper</b>, and <b>Krispy</b>.<br></div>
     <h3>Acknowledgment</h3>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs - UAS @ UCLA</title>
+    <meta name="description" content="UAS @ UCLA" />
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/MarkdownPage.css">
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="topnav">
+        <a href="https://uas.seas.ucla.edu/index.html" class="active">Home</a>
+        <a href="https://uas.seas.ucla.edu/join.html">Join</a>
+        <a href="https://uas.seas.ucla.edu/calendar.html">Calendar</a>
+        <a href="https://uas.seas.ucla.edu/members.html">Members</a>
+        <a href="https://uas.seas.ucla.edu/docs.html">Docs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="spacer"></div>
+    <h1>Hardware Design</h1>
+    <h3>Author: Eric Wong</h3>
+    <div class="autogen-md">With 2020 wrapping up and all of us here at UAS@UCLA finished with a successful Fall
+        Quarter, I want to take a moment to reflect on the accomplishments the Hardware Team achieved throughout this
+        research challenge.<br>As the pandemic hit and forced everyone home for the duration of Spring Quarter, UAS@UCLA
+        was motivated to remain an active organization and decided to pursue the NASA Undergraduate Student Research
+        Challenge. We came in with the goal of developing drone swarm technology to indefinitely lift a small payload.
+        Our proposal, titled AVIATA (Autonomous Vehicle Infinite Air Time Apparatus) and relevant to NASA's ARMD
+        (Aeronautics Research Mission Directorate) Strategic Thrust 6 initiative: Assured Autonomy for Aviation
+        Transformation, was submitted back in June. Specifically, our Hardware Team was tasked with developing the drone
+        swarm system, the frame each drone attaches too, and the docking mechanism.<br>After a successful proposal, our
+        team first had to crowdfund $2000 in order to receive the NASA grant and continue working on the project. We
+        surpassed this goal and ended up raising over $2,500 in about a month of crowdfunding on our GoFundMe page! Once
+        finished with crowdfunding, we dug deep into the technical aspects of our project, and presented our design in a
+        Preliminary Design Review at the end of October.<br>Our initial frame design was an octagonal shape, however,
+        due to the benefits of easily mounting an Apriltag (for long range docking identification) and payload to an
+        octocopter-like frame, we opted for the latter design. This design consists of 8 boom arms protruding from a
+        central frame made out of carbon fiber plates. On the top plate would be the large Apriltag, and secured to the
+        bottom plate would be a payload bay. This payload bay is a rectangular box with a door that opens to securely
+        fit a box that holds a 2kg box, or the payload. Landing legs on 4 of the carbon fiber booms allow for the frame
+        to land without damaging the docking mechanisms and payload.<br>For our drone swarm, we intended on using
+        commercial off the shelf (COTS) hexacopters. In order to generate more thrust from each drone, we opted for
+        using S4 batteries rather than S3 batteries so that we could maximize the thrust output of the drones without
+        having to worry about motor saturation when lifting the frame and payload. This was determined after performing
+        motor thrust tests with both S3 and S4 batteries. We also plan on further modifying the drone to contain the
+        docking attachment and necessary communications systems.<br>Lastly, our docking system, probably one of the most
+        complex tasks for the Hardware team, was designed with two main systems: the docking joint on the frame, and the
+        docking attachment on the drone. The docking joint on the frame has a “funnel” that guides the drone's docking
+        attachment to form a connection that does not require power to sustain. It also has two permanent magnets of
+        opposite polarities that are used to align the drone in the proper orientation with the funnels. The docking
+        attachment is connected to the bottom of each hexacopter and contains internal rack and pinion keys that are
+        used to slide into the funnels. It also has battery powered electromagnets that work in conjunction with the
+        permanent magnets on the docking joint for alignment and undocking.<br>Overall, while we have made significant
+        progress on our Hardware design with AVIATA, there is still much to be done with implementing and iterating the
+        physical hardware. Our next steps involve the structural strength testing of components, further motor/power
+        testing, and testing and increasing robustness of our docking system in preparation for our Critical Design
+        Review at the end of Winter Quarter. Thanks for your engagement this quarter, and we hope you stick with us
+        through the next one!<br>
+        <div style="text-align:center"><img src="/assets/aviata/aviata-blog-airframe.png" style="width: 60%;" /></div><br>
+    </div>
+    <h1>Software Design</h1>
+    <h3>Author: Axel Malahieude</h3>
+    <div class="autogen-md">The software side of AVIATA has continued to work with and improve our simulations to
+        prepare for running our code on physical drones. We've had a strong start to AVIATA, and have high hopes for
+        2021.<br>The docking team has been focused on implementing the 3 stage docking system previously mentioned -
+        using a large central target to help the drone find AVIATA, then using it to align and fly to the peripheral
+        target, and finally using that peripheral target to actually get close enough to dock. An important part of this
+        process is how the drone decides to move based on where it sees the target. To do this, we are using a PID
+        controller which we've spent the last week tuning. Meanwhile, other members of the team are working on
+        implementing the other stages of docking. Specifically, we are finalizing stages 1 and 3, which involve homing
+        in on a target using an on-board camera, and continuing work on stage 2, which involves flying from the big
+        central target on the frame to one of the 8 peripheral targets at our specified docking location. Finally, we
+        are improving our target detection algorithm by generating 3D simulations in Gazebo, a drone simulation
+        software.<br>
+        <div style="text-align:center"><img src="/aviata-blog-pid-graph.png" style="width: 60%;" /></div>
+        <br><b><i>Figure 1:</b> The PID tuning process for the controller that regulates our altitude, where the yellow
+        line represents the final parameters we decided to use. You can see that the drone is able to stabilize itself
+        at the desired altitude within 1 second, which is much better performance than any of the other
+        trials.</i><br>The controls software subteam, which has become our largest and most complex subteam, has
+        continued to work on the collaborative nature of AVIATA. A few modifications were necessary to the flight
+        controller software, named PX4, to support this, while the groundwork has been laid for inter-drone
+        communication using custom ROS2 messages.This is necessary for having the leader drone inform the follower
+        drones how they should be flying, since they'll all be attached to one another. All of this work is being done
+        with the goal of running this C++-based controller program on the Raspberry Pi that will accompany each
+        drone.<br>Finally, the communications team has completed the software-focused research and initial testing of
+        the OSLR-v2 mesh networking library. We have moved on to physical testing by ordering WiFi 6 antennas and plan
+        to use these with Raspberry Pis we already have to set up a proof-of-concept mesh network. This will provide the
+        framework for inter-drone communications that the controls team will depend on, as we hope to have it
+        operational by the time our Critical Design Review comes up.<br>
+    </div>
+    <h1>Afterword</h1>
+    <div class="autogen-md">With 2020 ending, we'd like to thank everybody who's been reading these blogs and keeping up
+        with our progress. It's been a very long and eventful year, and we're looking forward to continuing in 2021.
+        Next year, we'll be starting off strong by presenting our work directly to NASA. An internal poster session will
+        showcase all of the grant recipients across NASA's research programs, including the USRC, which we are a part
+        of. After our Critical Design Review in late February or early March, we'll be integrating all the software
+        teams and the hardware team together to have a final product by June. We hope to see you next year!<br></div>
+    <h3>Acknowledgment</h3>
+    <div class="autogen-md">These results are based upon work supported by the NASA Aeronautics Research Mission
+        Directorate under award number 80NSSC20K1452. This material is based upon a proposal tentatively selected by
+        NASA for a grant award of $10,811, subject to successful crowdfunding. Any opinions, findings, and conclusions
+        or recommendations expressed in this material are those of the authors and do not necessarily reflect the views
+        of NASA.</div>
+</body>
+<script src="../scripts/navbar.js"></script>
+
+</html>
