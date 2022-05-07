@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs - UAS @ UCLA</title>
+    <meta name="description" content="UAS @ UCLA" />
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/MarkdownPage.css">
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="topnav">
+        <a href="https://uas.seas.ucla.edu/index.html" class="active">Home</a>
+        <a href="https://uas.seas.ucla.edu/join.html">Join</a>
+        <a href="https://uas.seas.ucla.edu/calendar.html">Calendar</a>
+        <a href="https://uas.seas.ucla.edu/members.html">Members</a>
+        <a href="https://uas.seas.ucla.edu/docs.html">Docs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="spacer"></div>
+    <div class="autogen-md">When the COVID-19 pandemic hit the US and stay-at-home orders began, we at UAS@UCLA learned
+        that we wouldn’t get the chance to fly our brand-new UAV at the annual AUVSI-SUAS competition in Maryland this
+        year. This left us with a lot of time on our hands and not much to show for our work this school
+        year.<br>Fortunately, we were informed of a little-known NASA research grant for undergraduate students, called
+        the University Student Research Challenge (USRC). The onus is on the students to come up with a research topic
+        that aligns with NASA’s mission, and to then draft a research proposal for it. Our topic? AVIATA - the
+        Autonomous Vehicle Infinite Flight Time Apparatus. We plan to build a swarm of drones that’s able to collaborate
+        together to carry heavy items for an infinite amount of time by innovatively swapping charged and discharged
+        drones in and out of the swarm.<br>Fast-forward to July 2020. NASA reached out to us and let us know we had been
+        selected to receive grant money to fund our project! Riding on the heels of this fantastic news, we launched a
+        successful crowdfunding campaign as required by the USRC, which unlocked access to more of NASA’s pledged grant
+        money, and today we are in the initial stages of project design and planning.<br></div>
+    <h1>Software Design</h1>
+    <h3>Author: Axel Malahieude</h3>
+    <div class="autogen-md">Firstly, it was important to determine what the software team would be responsible for.
+        While we have a hardware team designing the mechanical aspects of AVIATA, the software team would be in charge
+        of creating the control systems. This means figuring out how to make several drones fly together, how to
+        communicate with the drone swarm, and how to autonomously dock and undock from the structure while in
+        flight.<br>In the design stage, we are having high-level discussions on how these processes will work.
+        Currently, this involves a lot of flow-charting and “what if” conversations to make sure we handle all possible
+        scenarios. For example, what if a drone flies to the structure to replace another drone, but it’s unable to find
+        it’s docking location?<br>Another software-oriented goal is to develop simulation capabilities. One of our
+        engineers, Ryan, has successfully created a Python program that can model how the drone swarm would react if a
+        drone were to leave. This is important because it will allow us to predict the minimum number and configuration
+        of drones we need based on the current weight we’re carrying. So far, the results are very promising, and we’ll
+        continue to develop this simulator.<br>The goal for the upcoming weeks is to fully flesh out what AVIATA will
+        look like from a software perspective. We have a preliminary design review planned for mid-October, where we
+        hope to get constructive feedback on our current design. Afterwards, we’ll be ready to start writing code and
+        programming the drones.<br></div>
+    <h1>Hardware Design</h1>
+    <h3>Author: Bhrugu Mallajosyula</h3>
+    <div class="autogen-md">As you might imagine, developing a collaborative drone swarm for lifting objects involves a
+        whole host of technical challenges, both mechanical and in software, that need to be dealt with to produce a
+        robust final product. The hardware team’s job is to design the fixtures and mechanisms that help this type of
+        interdrone collaboration run smoothly, and to make the software team’s job easier by reducing the mechanical
+        uncertainties that make communication and control more difficult.<br>The hardware team focuses on three main
+        areas of development: a frame to which the payload is secured, the docking mechanism that facilitates the
+        drones’ attachment to and detachment from the frame, and modifications to existing drones so that they function
+        as desired within our system. Though Covid-19 related restrictions make it difficult for team members to meet in
+        person, we’ve developed a plan for distributing manpower and resources between each of these areas so that we
+        can make steady progress even without in person meetings for the foreseeable future.<br>The hardware team is
+        already hard at work researching, prototyping, and designing the components to make our system run smoothly. For
+        development of the frame, one of our engineers, Willy, has determined the weight budget for the frame and
+        payload by calculating the thrust produced by only three drones flying in suboptimal conditions. Another
+        engineer, James, is researching ways to reduce oscillation and vibration of the payload, by damping or other
+        means, to reduce the corrections that need to be made during flight in software.<br>For the docking mechanism,
+        I’ve been testing a series of 3D printed fixtures that attach to either the frame or a swarm drone to help
+        magnetically align the drones in the proper orientation for attachment. Progress on all fronts has been smooth
+        and continual so far.<br>Over the next few weeks the hardware team plans to finalize our preliminary design and
+        test subassemblies individually before moving to the next stage of development. We hope to test the docking
+        mechanism using a human-piloted hexacopter before our preliminary design review in mid-October, where UCLA
+        faculty and industry experts will give us feedback on our developments up until that point. We’re very excited
+        about this project and our progress, and hope you’ll stick around with us on this journey.<br></div>
+    <h3>Acknowledgment</h3>
+    <div class="autogen-md">These results are based upon work supported by the NASA Aeronautics Research Mission
+        Directorate under award number 80NSSC20K1452. This material is based upon a proposal tentatively selected by
+        NASA for a grant award of $10,811, subject to successful crowdfunding. Any opinions, findings, and conclusions
+        or recommendations expressed in this material are those of the authors and do not necessarily reflect the views
+        of NASA.</div>
+</body>
+<script src="../scripts/navbar.js"></script>
+
+</html>

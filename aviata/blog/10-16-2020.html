@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs - UAS @ UCLA</title>
+    <meta name="description" content="UAS @ UCLA" />
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/MarkdownPage.css">
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="topnav">
+        <a href="https://uas.seas.ucla.edu/index.html" class="active">Home</a>
+        <a href="https://uas.seas.ucla.edu/join.html">Join</a>
+        <a href="https://uas.seas.ucla.edu/calendar.html">Calendar</a>
+        <a href="https://uas.seas.ucla.edu/members.html">Members</a>
+        <a href="https://uas.seas.ucla.edu/docs.html">Docs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="spacer"></div>
+    <h1>Software Design</h1>
+    <h3>Author: Ryan Nemiroff</h3>
+    <div class="autogen-md">With our first design review two weeks away, the AVIATA team has progressed in designing and
+        testing elements of the software system. We’ve conducted real-world tests to gain a practical understanding of
+        our vision system’s ability to identify image targets. We are also progressing towards being able to simulate
+        and benchmark various mesh networking algorithms for drone communication.Although we have not written any flight
+        code yet, we are busy designing and developing simulation techniques to ensure that flight will be as reliable
+        as possible. We have developed a drone control & physics simulator in Python, that currently reflects a
+        simplified model of the physics of drone flight. We are able to control the motors and calculate the resultant
+        forces on the AVIATA structure, which so far has given us basic confidence that our current hardware selections
+        are feasible. Next, we will be adding a simulated control system, which will give us the ability to analyze how
+        the system might act in real flight. This will inform our decisions on how to allocate control to the motors,
+        and tell us what scenarios the structure can safely operate in.<br><img src=/assets/aviata/simulator.png
+            alt="simulator.png" />_Simulated AVIATA structure. In this formation of eight hexacopters, each small box
+        represents a propeller, with its color indicating the motor speed._<br>We are itching to begin writing the
+        AVIATA flight code, but we can’t do it without preliminary testing of our ideas, which is why all these
+        simulations are so important! Another preparation we’ve made is planning out the overall logic flow of the
+        system, which is a tough design challenge due to all the physically-separated moving parts. Below is a taste of
+        our logic diagrams, which we will refine as needed to support all modes of operation.<br><img src=/assets/aviata/logic.png
+            alt="logic.png" /><br></div>
+    <h1>Hardware Design</h1>
+    <h3>Author: James Tseng</h3>
+    <div class="autogen-md">Since the last two weeks, our Mechanical Airframe have been focusing our attention on four
+        major issues to resolve: the strength of the carbon fiber, configuring the Apriltag on the frame, the structure
+        of the payload frame, and figuring out how to onboard the new members of our club onto this team.<br>We had
+        decided on designing the octagon payload frame with twin rods of carbon fiber as the perimeter, as opposed to
+        one thicker carbon fiber tube. This decision was made mostly due to the low price factor of the specific 0.548”
+        carbon fiber tubes. I conducted a stress test by experimenting with weights hanging on one side of the tubes
+        clamped to one side, creating an end loaded cantilever beam scenario. Multiple measurements were taken and the
+        bulk modulus of elasticity was calculated to be 1.09 GPa for the carbon fiber tubes in parallel. This value was
+        lower than we had anticipated, and thus led to the decision to increase the diameter of the carbon tubes of the
+        frame.<br>Another concern we had was the effects of having a large, centralized Apriltag located in the middle
+        of the frame and the aerodynamic effects this would cause, as well as the method of mounting it to the frame.
+        One suggested idea was to place the large Apriltag on a screen mesh to allow air to flow through this large
+        surface. Team member Bhrugu was able to test this idea with a smaller filter, and saw promising
+        results.<br>However, the main issue arose with the consideration of mounting this Apriltag to the frame. To
+        place the tag in the center of the frame without increasing weight significantly, we considered pulling taut
+        fishing wires to support the tag. However, we would have to devise a similar solution for the payload attachment
+        that would also be mounted in the center of the frame. From here, the team decided to revert our payload frame
+        design to a more traditional spoke design which makes mounting both the Apriltag and the payload much simpler,
+        at the possible expense of additional weight. We are considering conducting a trade study to determine which
+        would be optimal.<br>Finally, as we have started a new quarter, we are excited to welcome our new students
+        interested in UAS@UCLA. We are planning ways to incorporate tasks so that they can gain some new experience
+        while not being overwhelmed by these unfamiliar and possibly challenging tasks. Part of the plan is to hold
+        office hours for them to drop by and ask any questions or ask for help, or even just to socialize among us as a
+        club. Being involved with a hands-on engineering project is tough in this current setting, but we hope to make
+        progress the best we can.<br></div>
+    <h3>Acknowledgment</h3>
+    <div class="autogen-md">These results are based upon work supported by the NASA Aeronautics Research Mission
+        Directorate under award number 80NSSC20K1452. This material is based upon a proposal tentatively selected by
+        NASA for a grant award of $10,811, subject to successful crowdfunding. Any opinions, findings, and conclusions
+        or recommendations expressed in this material are those of the authors and do not necessarily reflect the views
+        of NASA.</div>
+</body>
+<script src="../scripts/navbar.js"></script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs - UAS @ UCLA</title>
+    <meta name="description" content="UAS @ UCLA" />
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/MarkdownPage.css">
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="topnav">
+        <a href="https://uas.seas.ucla.edu/index.html" class="active">Home</a>
+        <a href="https://uas.seas.ucla.edu/join.html">Join</a>
+        <a href="https://uas.seas.ucla.edu/calendar.html">Calendar</a>
+        <a href="https://uas.seas.ucla.edu/members.html">Members</a>
+        <a href="https://uas.seas.ucla.edu/docs.html">Docs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="spacer"></div>
+    <h1>Software Design</h1>
+    <h3>Author: Puneet Nayyar</h3>
+    <div class="autogen-md">Since our last update, each of the software teams have officially begun physical testing.
+        After spending so much time implementing our designs in simulation, we finally had the opportunity to run our
+        code on physical drones and get a better idea of our progress and future areas to focus on.<br>To test our
+        cooperative control software, we rigidly connected two drones and were able to have a leader drone successfully
+        send attitude setpoints to a follower and demonstrate a position hold.<br>One of Ryan’s videos:<br>
+        <div style="text-align:center"><iframe
+                src="https://drive.google.com/file/d/1F1gabOHSMQpjT5iPG4fChp8tstxiRRBR/preview" width="640"
+                height="480"></iframe></div><br>The docking team also started testing the preliminary portions of the
+        docking process. We successfully had a Raspberry Pi mounted on the drone activate offboard mode and send
+        velocity setpoints to takeoff and land autonomously. In addition, the camera on the drone relayed a video stream
+        to the RPi in which we were able to detect the AprilTag placed on the ground.<br>Here is a picture from the
+        camera on-board the drone during this docking testing procedure, where we can clearly see the target that the
+        drone detected:<br>
+        <div style="text-align:center"><img src="/asssets/aviata/usrc_docking_onboard_pic.png" style="width: 60%;" /></div>
+        <br>On the communications side, we tested sending and receiving data in a setup with three nodes and were able
+        to get quantitative results on delay time and packet loss rate.<br>Some of Yuchen’s test results, showing that
+        networking and packet delay times are within acceptable bounds:<br>
+        <div style="text-align:center"><img src="/assets/aviata/usrc_comms_packet_loss-min.png" style="width: 60%;" /></div>
+        <br>We also presented our progress and the results of these tests at our Critical Design Review last week to
+        alumni and faculty and received great feedback and helpful pointers for the future. We’ll be spending the next
+        few weeks incorporating that feedback and continuing our testing. Some next steps include PID tuning, mesh
+        network incorporation, and autonomous navigation to a vision target.<br>
+    </div>
+    <h3>Acknowledgment</h3>
+    <div class="autogen-md">These results are based upon work supported by the NASA Aeronautics Research Mission
+        Directorate under award number 80NSSC20K1452. This material is based upon a proposal tentatively selected by
+        NASA for a grant award of $10,811, subject to successful crowdfunding. Any opinions, findings, and conclusions
+        or recommendations expressed in this material are those of the authors and do not necessarily reflect the views
+        of NASA.</div>
+</body>
+<script src="../scripts/navbar.js"></script>
+
+</html>

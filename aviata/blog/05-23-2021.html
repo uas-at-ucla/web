@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs - UAS @ UCLA</title>
+    <meta name="description" content="UAS @ UCLA" />
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/MarkdownPage.css">
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="topnav">
+        <a href="https://uas.seas.ucla.edu/index.html" class="active">Home</a>
+        <a href="https://uas.seas.ucla.edu/join.html">Join</a>
+        <a href="https://uas.seas.ucla.edu/calendar.html">Calendar</a>
+        <a href="https://uas.seas.ucla.edu/members.html">Members</a>
+        <a href="https://uas.seas.ucla.edu/docs.html">Docs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="spacer"></div>
+    <h1>Airframe</h1>
+    <h3>Author: James Tseng</h3>
+    <div class="autogen-md">Since the last update, the Airframe team has been working on three tasks as we progress
+        nearing the end of Spring Quarter.<br>First, the Airframe team finalized and 3D printed a practice docking mount
+        for the Docking team to test the accuracy of their docking PID tuning, since previously the drone simply was
+        tested to land on the target on the ground.<br>
+        <div style="text-align:center"><img src="/assets/aviata/docking_mechanism.jpg" style="width: 30%;" /></div><br>This
+        design and the cone adapter will be the final shape of the docking mechanism, which is currently only missing
+        the latching keys that will ensure the dock and drone rigidly attach, and the mount to secure onto the carbon
+        fiber arms of the frame.<br>The Docking team has been successful in landing a drone into the docking cone, which
+        will be elaborated on in the software section. How exciting!<br>The second task currently on hand is to finalize
+        the docking mechanism. This includes the key inserts that lock the drone to the frame, which is actuated by
+        servo rotation. The key actuation, shown in its extended and retracted positions, are shown below.<br>
+        <div style="text-align:center"><img src="/assets/aviata/docking_mech_cad.png" style="width: 60%;" /></div><br>The
+        docking keys, linkage arms, and the cylinder will be 3D printed and connected with metal screws and inserts.
+        While a 3D printed linkage is not ideal, we decided that it is sufficient enough for prototyping and testing
+        purposes, since the link between the keys and servo should not be load bearing.<br>The design is nearly
+        complete, and will be integrated with the existing docking adapter to be assembled and mounted on the drone,
+        with the shape will be very similar to the one seen on the testing docking mount.<br>Lastly, a new testing
+        structure was designed and constructed for progressing testing from a 2 drone test shown before onto a 4 drone
+        test to ensure that the control scheme developed by the Controls team will be stable at a scale similar to that
+        of the final frame at the 8 drone scale.<br>
+        <div style="text-align:center"><img src="/assets/aviata/4-drone-system.png" style="width: 40%;" /></div><br>This new
+        testing structure utilizes the same square carbon fiber tubes that will be on the final prototype frame, and
+        utilizes 3D printed clamping structures to hold the drones and tubes together. Here’s a closer look at the rigid
+        clamp mounts designed on a drone and the central structure:<br>
+        <div style="text-align:center"><img src="/assets/aviata/4-drone-system-close.png" style="width: 40%;" /></div><br>This
+        testing structure is already underway in fabrication, and should expect to see the first test flight soon before
+        the end of the quarter!<br>
+    </div>
+    <h1>Software</h1>
+    <h3>Author: Ryan Nemiroff</h3>
+    <div class="autogen-md">To start off the software section, we want to announce that we have made our code repository
+        public. We are passionate about sharing as many resources as possible with the world, so feel free to check it
+        out at <a href="https://github.com/uas-at-ucla/aviata">github.com/uas-at-ucla/aviata</a>.<br>In the last update
+        (on 4/30) we showed a milestone test that demonstrated the effectiveness of the canted motors in enabling yaw
+        control, as well as a handoff of the leadership role from one drone to the other in flight. At this point, the
+        code had also included modifications that stopped the drones from fighting each other due to yaw “disagreements”
+        that might be caused by typical hardware imperfections such as misaligned compasses. This further aided yaw
+        control.<br>One notable result from the last test was the dip in altitude when the drones switched
+        leader/follower roles. This has to do with the fact that we are relying on the PX4 flight software to estimate
+        the thrust required to hover, but the follower drone is not in a mode that actively estimates this hover thrust.
+        When it becomes the leader, it takes a moment to determine the necessary amount of thrust. The easiest way to
+        fix this was to simply tweak PX4 so that it actively estimates the hover thrust at all times. Very soon, we’ll
+        be able to test how effective this is.<br>Something we <i>have</i> tested is the ability of the drones to fly
+        cooperatively while facing different directions (e.g. north, south, east, west) relative to each other. This
+        requires live adjustments to the attitude setpoints to transform them to the correct coordinate frame. If we
+        have done this correctly, there won’t be any effect on the frame’s maneuverability. Luckily, the test was
+        successful and that’s exactly what we observed. Specifically, we tested the same 2-drone setup, but with one
+        drone rotated 45 degrees counterclockwise around the yaw axis -- in other words, it’s facing a little to the
+        left. This is a precursor to the final frame design in which all 8 drones will be facing radially
+        outward.<br>Additionally, we have reached a huge milestone by using mesh networking (OLSRv2) for communication
+        in flight. This will be important when scaling up to more than 2 drones, because a mesh network will offer the
+        greatest flexibility in distributing information among a swarm of drones with no designated access point. While
+        we have been working on mesh networking for a while, we just now figured out how to integrate it with the flight
+        code, which uses ROS2 to communicate. The challenge was configuring ROS2 (specifically, it’s Fast-DDS
+        middleware), to operate within the constraints of the mesh network, which does not support multicast. This
+        required reading and re-reading much of the Fast-DDS documentation until we understood it well enough to make
+        our desired configuration. In the future, we are interested in implementing multicast and/or broadcast on the
+        mesh network, because this will allow ROS2 nodes to automatically discover each other, as they do on normal
+        networks.<br>Recently, I’ve been hard at work prepping hardware for the upcoming 4-drone test. There are a lot
+        of little details and repetitive tasks that take time, so it's not much to talk about. A couple important next
+        steps will be fleshing out a graphical ground control station so it is easier to manage the increased number of
+        drones, and analyzing the modeled behavior in the Python simulator before trying out the real thing.<br>Below is
+        a preview of what the 4-drone test will look like, in my ridiculously messy garage. It’s big!<br><img
+            src=/assets/aviata/4-drones.jpg alt="4-drones.jpg" /><br>Additionally, each drone now has a name! Thanks to our
+        crowdfunding donors who named them. See who they are at <a
+            href="https://uas.seas.ucla.edu/aviata">uasatucla.org/aviata</a>.<br><img src=/assets/aviata/drone-names.jpg
+            alt="drone-names.jpg" />Names are visible when zoomed in. From left to right, they are: <b>Bryan Sun</b>,
+        <b>DN</b>, <b>Hopper</b>, and <b>Krispy</b>.<br></div>
+    <h3>Acknowledgment</h3>
+    <div class="autogen-md">These results are based upon work supported by the NASA Aeronautics Research Mission
+        Directorate under award number 80NSSC20K1452. This material is based upon a proposal tentatively selected by
+        NASA for a grant award of $10,811, subject to successful crowdfunding. Any opinions, findings, and conclusions
+        or recommendations expressed in this material are those of the authors and do not necessarily reflect the views
+        of NASA.</div>
+</body>
+<script src="../scripts/navbar.js"></script>
+
+</html>
