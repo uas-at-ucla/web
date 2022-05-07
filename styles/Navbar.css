@@ -4,6 +4,7 @@
     position: absolute;
     height: max-content;
     width: 100%;
+    top: 0;
     background-color: black;
   }
   

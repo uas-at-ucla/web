@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Docs - UAS @ UCLA</title>
+    <meta name="description" content="UAS @ UCLA" />
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/MarkdownPage.css">
+    <link rel="stylesheet" href="https://uas.seas.ucla.edu/styles/Navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="topnav" id="topnav">
+        <a href="https://uas.seas.ucla.edu/index.html" class="active">Home</a>
+        <a href="https://uas.seas.ucla.edu/join.html">Join</a>
+        <a href="https://uas.seas.ucla.edu/calendar.html">Calendar</a>
+        <a href="https://uas.seas.ucla.edu/members.html">Members</a>
+        <a href="https://uas.seas.ucla.edu/docs.html">Docs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div id="spacer"></div>
+    <h1>Hardware Design</h1>
+    <h3>Author: Willy Teav</h3>
+    <div class="autogen-md">As our Critical Design Review (CDR) approaches, the airframe team is beginning the process
+        of testing the mechanical components of the system. Specifically, we are looking into testing the docking
+        joints, the carbon fiber spars, the target mounts, and the payload mount.<br>The docking joints will undergo
+        testing for both performance and durability. Our objectives are to identify the amount of alignment error we can
+        afford during docking and how much stress the docking mechanism can withstand. To get a more thorough
+        understanding of how much alignment error we can afford, we will be taking a statistical approach to analyzing
+        our results, meaning that we are looking for a success rate for each of our different test conditions.<br>Our
+        carbon fiber spars will be treated as a cantilever beam. We will be attempting to apply a load at one end of the
+        spar that is about the same as the max thrust exerted by one of the hexacopters.<br>Our objective with regards
+        to the target mount it to figure out if it is rigid enough to ensure AprilTag detection during flight. We will
+        try to simulate the flight conditions by using a wind-making device.<br>Finally, we want to test the payload
+        mount and container to make sure that there is no significant movement during flight that could affect flight
+        dynamics by changing the center of gravity or by inducing oscillations. We will test this by taking and
+        comparing accelerometer readings from the payload and the payload’s container.<br></div>
+    <h1>Software Design</h1>
+    <h3>Author: Yuchen Yao</h3>
+    <div class="autogen-md">This week the team had a meeting with one of our alumni and discussed testings for different
+        parts of the system and integration. He provided many useful insights regarding the degree of tests that we
+        should perform before putting all of the components together given his expertise in this field. A lot of the
+        discussions focused on making the tests more automated and rigorous so that we can better prepare for more
+        unexpected situations in physical tests. The test-driven development he proposed was not only useful in our
+        current stage of development but also for future projects.<br>For the incoming CDR, each team has planned a
+        series of tests that would demonstrate the capabilities of individual systems. The controls team will show that
+        the leader drone is able to send commands to the follower drones. The docking team will use on-board Raspberry
+        Pi and camera to guide the drone to autonomously find and land on the target. The Comms team will demonstrate
+        direct and multi-hop inter-drone communication ability and network performance of the OONF framework. Each team
+        is actively designing tests and performing them to get each part of the system ready for integration.<br></div>
+    <h3>Afterword</h3>
+    <div class="autogen-md">With our Critical Design Review coming in 2 weeks' time, we'll be taking a short break from
+        blogs. Our next one will come after the CDR on the 19th, to give us more time to focus on testing. Look out for
+        an update the following week on how our testing and CDR presentation went!<br></div>
+    <h3>Acknowledgment</h3>
+    <div class="autogen-md">These results are based upon work supported by the NASA Aeronautics Research Mission
+        Directorate under award number 80NSSC20K1452. This material is based upon a proposal tentatively selected by
+        NASA for a grant award of $10,811, subject to successful crowdfunding. Any opinions, findings, and conclusions
+        or recommendations expressed in this material are those of the authors and do not necessarily reflect the views
+        of NASA.</div>
+</body>
+<script src="../scripts/navbar.js"></script>
+
+</html>
