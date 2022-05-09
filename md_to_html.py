@@ -82,7 +82,7 @@ def main():
                 if prev_line == LineTypes.PLAINTEXT or prev_line == LineTypes.EMPTY_IN_DIV:
                     of.write('</div>')
                 if prev_line == LineTypes.LIST_ELEM:
-                    of.write('/<ul>')
+                    of.write('</ul>')
                 h_lev = len(clean)-len(h_check)
                 of.write(f'<h{h_lev}>')
                 of.write(h_check[1:])
@@ -97,7 +97,7 @@ def main():
                     prev_line = LineTypes.EMPTY_IN_DIV
                 else:
                     prev_line = LineTypes.EMPTY
-            elif clean[0:1] == '* ' or clean[0] == '-':
+            elif clean[0:2] == '* ' or clean[0] == '-' or clean[0:2] == '*	':
                 if prev_line == LineTypes.PLAINTEXT or prev_line == LineTypes.EMPTY_IN_DIV:
                     of.write('</div>')
                 if prev_line != LineTypes.LIST_ELEM:
@@ -112,7 +112,7 @@ def main():
                 if clean == '<br>':
                     continue
                 if prev_line == LineTypes.LIST_ELEM:
-                    of.write('/<ul>')
+                    of.write('</ul>')
                 if prev_line != LineTypes.PLAINTEXT and prev_line != LineTypes.EMPTY_IN_DIV:
                     of.write('<div class=\"autogen-md\">')
                 clean = re.sub('!\[.*?]\(.*?\)', image, clean)
