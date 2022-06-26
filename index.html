@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>UAS @ UCLA</title>
+    <title>UAS@UCLA</title>
     <meta name="description" content="UAS @ UCLA">
     <link rel="stylesheet" href="./styles/Home.css">
     <link rel="stylesheet" href="./styles/Navbar.css">
@@ -10,7 +10,14 @@
 
 <body>
    <div class="topnav" id="topnav">
-      <a href="./index.html" class="active">Home</a>
+      <a href="./index.html" class="active"><img src="./assets/logos/_BXT Words White Primary Fill.png" style="height:3.5ch"></a>
+      <!-- space out logo and rest of links -->
+      <div style="margin: auto;">
+         <!-- <div class="notif">
+            Announcement here!
+         </div> -->
+      </div>
+      <!-- links -->
       <a href="./join.html">Join</a>
       <a href="./calendar.html">Calendar</a>
       <a href="./members.html">Members</a>
@@ -19,6 +26,7 @@
          <i class="fa fa-bars"></i>
        </a>
     </div>
+
     <div class='title' id="title">
         <img class="logo" src="./assets/logo.png"/>
         <div class="h1">UAS@UCLA</div>
@@ -36,8 +44,8 @@
             </iframe>
            <div class="h2">Follow our Social Media!</div>
            <div style="text-align: center; margin-top: 2vh">
-               <a class="socials" href="https://www.instagram.com/uasatucla/"><img style="width: 8%" src="./assets/instagram-logo-light.png"/></a>
-               <a class="socials" href="https://www.linkedin.com/company/uasatucla/"><img style="width: 8%; margin-left: 5%" src="./assets/linked-in-logo.png"/></a>
+               <a class="socials" href="https://www.instagram.com/uasatucla/"><img class="socials" src="./assets/instagram-logo-light.png"/></a>
+               <a class="socials" href="https://www.linkedin.com/company/uasatucla/"><img class="socials" style="margin-left: 5%" src="./assets/linked-in-logo.png"/></a>
            </div>
            <div class="h2">Read more about us!<a class="more-button" href="join">Get involved</a></div>
            <p></p>
@@ -88,13 +96,12 @@
      }
    }
    document.addEventListener("scroll", scrollFunct);
-   document.getElementById('topnav').style.backgroundColor="transparent";
    function scrollFunct(){
       if(window.scrollY > document.getElementById('title').clientHeight){
          document.getElementById('topnav').style.backgroundColor = "black";
       }
       else{
-         document.getElementById('topnav').style.backgroundColor = "transparent";
+         // document.getElementById('topnav').style.backgroundColor = "transparent";
       }
       
    }

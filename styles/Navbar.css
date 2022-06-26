@@ -1,11 +1,13 @@
 
 .topnav {
-    overflow: hidden;
-    position: absolute;
+    position: sticky;
     height: max-content;
+    display: flex;
     width: 100%;
     top: 0;
     background-color: black;
+    border-bottom: 1px solid dimgrey;
+    z-index: 100;
   }
   
   /* Style the links inside the navigation bar */
@@ -14,17 +16,17 @@
     display: flex;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 30px;
     box-sizing: border-box;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 18px;
     font-family: Lato, sans-serif;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: white;
-    color: #003B5C;
+    color: #006dab;
+    font-weight: 800;
   }
   
   /* Hide the link that should open and close the topnav on small screens */
@@ -32,6 +34,17 @@
     display: none;
   }
   
+  .notif {
+    width: fit-content;
+    color: #fff;
+    font-size: 18px;
+    background-color: #ffb71b;
+    padding: 10px 20px;
+    font-family: Lato,sans-serif;
+    border-radius: 10px;
+    margin: auto;
+  }
+
    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
    @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
@@ -60,9 +73,10 @@
   } 
   
   @media screen and (min-width: 600px){
-    .topnav{display: flex;
+    .topnav{
+      display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
       align-items: center;}
   }
