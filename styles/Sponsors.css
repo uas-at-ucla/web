@@ -44,14 +44,21 @@ h1{
     width: 90%;
 }
 .sponsor-logo{
-    width: 25%;
+    width: 30%;
+    margin: 5px;
 }
+.sponsor-logo:hover {
+    transform: scale(1.05);
+}
+
 .project-sponsor{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    padding-bottom: 20px;
+    margin:auto;
     color: black;
 }
 .sponsor-packet{
@@ -59,4 +66,8 @@ h1{
 }
 .bottom-element{
     padding-bottom: 40px;
+}
+
+td{
+    padding:5px 30px
 }
