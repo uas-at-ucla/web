@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
 body{
     font-family: Lato,sans-serif;
-    margin: 0;
+    margin: 0
+    
 }
 img{
     display: block;
@@ -24,25 +25,46 @@ h1{
     border-bottom: grey 2px solid;
 }
 p{
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 85%;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 80%;
 }
 h2{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 h3{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+h4{
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .autogen-md{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
     max-width: 85%;
 }
-.ul{
-    padding-left: 20px;
-    padding-right: 20px;
+ul{
+    padding-left: 10%;
+    padding-right: 10%;
     max-width: 85%;
+}
+
+.wrap-iframe{
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.wrap-iframe iframe{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 0;
 }
