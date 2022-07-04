@@ -11,25 +11,32 @@
 
 <body>
     <div class="topnav" id="topnav">
-        <a href="https://uas.seas.ucla.edu/index.html" class="active">Home</a>
-        <a href="https://uas.seas.ucla.edu/join.html">Join</a>
-        <a href="https://uas.seas.ucla.edu/calendar.html">Calendar</a>
-        <a href="https://uas.seas.ucla.edu/members.html">Members</a>
-<a href="./gallery.html">Gallery</a>
-        <a href="https://uas.seas.ucla.edu/docs.html">Docs</a>
+        <a href="./index.html" class="active"><img src="https://uas.seas.ucla.edu/assets/logos/_BXT Words White Primary Fill.png" style="height:3.5ch;"></a>
+        <!-- space out logo and rest of links -->
+        <div style="margin: auto;">
+        </div>
+        <!-- links -->
+        <a href="./join.html">Join</a>
+        <a href="./calendar.html">Calendar</a>
+        <a href="./members.html">Members</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./docs.html">Docs</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+           <i class="fa fa-bars"></i>
         </a>
     </div>
-    <div id="spacer"></div>
-    <h1>Foreword</h1>
+
+    <img src="/assets/aviata/aviata-patch.png" style="width:20%; padding: 2.5%">
+    <div class="autogen-md"><a href="/aviata/blog.html">Back to AVIATA blogs</a></div>
+    <h1>Update #10: April 11, 2021 </h1>
+    <h2>Foreword</h2>
     <div class="autogen-md">It's been a while since our last update, and we've been hard at work improving and
         developing the system. Around the time of our last update (late February), we had our Cumulative Design Review,
         where we presented our work to UCLA faculty and alumni, who gave us very valuable feedback. These past 6 weeks
         have been intensely focused on acting on that feedback, which involved lots of physical testing and new
         prototyping. Because of how long it's been, we have a dedicated update from each of our 4 subteams to catch
         everyone up.<br></div>
-    <h1>Airframe</h1>
+    <h2>Airframe</h2>
     <div class="autogen-md">This past month, Airframe has been busy regrouping and redesigning a lot of our major
         components after feedback from last quarter's design review. We are forgoing our previous docking mechanism in
         favor of a more simple one, with a conical guide and cylindrically symmetric latch.<br>
@@ -41,7 +48,7 @@
         for continuous flight, docking, and undocking. Thanks for following along on our journey, and be sure to keep up
         with our future blog updates to see our progress!<br>
     </div>
-    <h1>Controls</h1>
+    <h2>Controls</h2>
     <h3>Author: Ryan Nemiroff</h3>
     <div class="autogen-md">We've all been hard at work since our Critical Design Review on February 19th. As with all
         the subteams, the controls team received a lot of insightful feedback to help move the project forward. The two
@@ -84,7 +91,7 @@
         during operation. We recently completed implementation and successful simulation of the “leader” drone handing
         off its role to another drone in flight. Look out for a video of this test in the near future!<br>
     </div>
-    <h1>Communications</h1>
+    <h2>Communications</h2>
     <h3>Author: Yuchen Yao</h3>
     <div class="autogen-md">The Communication team is currently working on integrating OONF network framework with ROS2.
         At this stage, I am working on implementing a bridge for serializing and transmitting ROS2 messages. Building
@@ -95,7 +102,7 @@
         unlikely that we can implement and test the MOST protocol to its full extent. However, I think it is still
         worthwhile to continue its implementation even after this project since it can make communication much more
         flexible and redundant for communication in general.<br></div>
-    <h1>Docking</h1>
+    <h2>Docking</h2>
     <h3>Author: Axel Malahieude</h3>
     <div class="autogen-md">A lot of work and progress has been done in the docking subteam. Our presentation at the CDR
         in front of faculty and alumni went well, thanks to Puneet's work on optimizing the use of our Apriltag library
@@ -133,6 +140,10 @@
         NASA for a grant award of $10,811, subject to successful crowdfunding. Any opinions, findings, and conclusions
         or recommendations expressed in this material are those of the authors and do not necessarily reflect the views
         of NASA.</div>
+        <br>
+        <div class="autogen-md"><a href="/aviata/blog.html">Back to AVIATA blogs</a></div>
+        <div id="spacer"></div>
+
 </body>
 <script src="https://uas.seas.ucla.edu/scripts/navbar.js"></script>
 
