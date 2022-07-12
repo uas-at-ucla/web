@@ -46,9 +46,11 @@ h1{
 .sponsor-logo{
     width: 30%;
     margin: 5px;
+    transition: 0.2s
 }
 .sponsor-logo:hover {
     transform: scale(1.05);
+    transition: 0.2s
 }
 
 .project-sponsor{

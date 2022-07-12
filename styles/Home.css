@@ -74,11 +74,13 @@ body{
 }
 .sponsor-graphic {
   width: 60vw;
-  margin: 20px
+  margin: 20px;
+  transition: 0.2s
 }
 
 .sponsor-graphic:hover {
   transform: scale(1.02);
+  transition: 0.2s
 }
 
 .sponsorbar {
@@ -87,10 +89,12 @@ body{
 
 .socials {
   width: 8%;
+  transition: 0.2s
 }
 
 .socials:hover {
   transform: scale(1.08);
+  transition: 0.2s
 }
 
 .p {
@@ -114,11 +118,13 @@ body{
   margin-bottom: 20px;
   font-family: Lato,sans-serif;
   border-radius: 10px;
+  transition: 0.2s
 }
 
 .go-button:hover {
   background-color: #006dab;
   transform: scale(1.05);
+  transition: 0.2s
 }
 
 .more-button {
@@ -133,11 +139,12 @@ body{
   font-family: Lato,sans-serif;
   justify-self: flex-end;
   border-radius: 10px;
-
+  transition: 0.2s
 }
 .more-button:hover {
   background-color: #006dab;
   transform: scale(1.05);
+  transition: 0.2s
 }
 .about {
   height: max-content;
@@ -169,10 +176,12 @@ body{
   margin-bottom: 10px;
   max-width: 450px;
   border-radius: 10px;
+  transition: 0.2s
 }
 
 .project:hover {
   transform: scale(1.02);
+  transition: 0.2s
 }
 
 .project .p {

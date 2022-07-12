@@ -21,12 +21,14 @@
     text-decoration: none;
     font-size: 18px;
     font-family: Lato, sans-serif;
+    transition: 0.2s
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
     color: #006dab;
     font-weight: 800;
+    transition: 0.2s
   }
   
   /* Hide the link that should open and close the topnav on small screens */
