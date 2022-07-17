@@ -2,7 +2,7 @@
 body{
     font-family: Lato,sans-serif;
     margin: 0
-    
+
 }
 img{
     display: block;
@@ -51,7 +51,11 @@ ul{
     padding-right: 10%;
     max-width: 85%;
 }
-
+ol{
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 85%;
+}
 .wrap-iframe{
     padding-left: 10%;
     padding-right: 10%;
