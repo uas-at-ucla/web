@@ -1,0 +1,42 @@
+
+h2 {
+    width: 70% !important;
+    margin: auto;
+    padding: 32px 0;
+}
+
+.officer-row {
+    width: 70%; 
+    display:flex; 
+    margin: auto;
+    margin-bottom: 64px;
+}
+
+.officer-row img {
+    width: parent;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.profile4 {
+    width:25%; 
+}
+
+.profile3 {
+    width:33.3%; 
+}
+
+.profile6 {
+    width:16.6%; 
+}
+
+.profile-text {
+    padding: 16px; 
+    font-size: large;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.mr {
+    margin-right: 16px;
+}
